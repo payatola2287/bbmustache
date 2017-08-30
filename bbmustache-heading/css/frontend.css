@@ -1,0 +1,25 @@
+.bbmustache-fancy-heading-holder,
+.bbmustache-fancy-heading-holder .bbmustache-content-text{
+  position: relative;
+}
+.bbmustache-fancy-heading-holder{
+  overflow: visible;
+}
+.bbmustache-text-bg{
+  display: block;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  font-size: 50px;
+  line-height: 1;
+  color: rgba( 0,0,0,0.1 );
+}
+.bbmustache-fancy-heading-holder .bbmustache-content-text{
+  z-index: 2;
+  margin: 0 0 15px;
+  padding: 0;
+}
