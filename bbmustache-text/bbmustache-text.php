@@ -1,7 +1,7 @@
 <?php
 /**
  * Module Name: Mustache Text
- * Version: 1.0
+ * Version: 2.0
 **/
 class MustacheText extends FLBuilderModule {
   public function __construct(){

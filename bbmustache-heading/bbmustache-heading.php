@@ -1,7 +1,7 @@
 <?php
 /**
  * Module Name: Mustache Heading
- * Version: 1.0
+ * Version: 2.0
 **/
 class MustacheHeading extends FLBuilderModule {
   public function __construct(){
