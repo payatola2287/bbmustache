@@ -43,7 +43,7 @@
 }
 
 /* PAGINATION CSS */
-/* PAGINATION CSS */
+
 ul.page-numbers{
   padding: 0;
   list-style: none;
@@ -67,9 +67,10 @@ ul.page-numbers .page-numbers:visited{
   text-align: center;
 }
 
-/*  DAFT LAYOUT layout--daft*/
-.item--grid.layout--daft  .wrapper--content,
-.item--grid.layout--daft  .item--link{
+/*  DAFT LAYOUT layout--daft */
+
+.item--grid.layout--daft .wrapper--content,
+.item--grid.layout--daft .item--link{
   -webkit-transform: translateY(70%);
     -ms-transform: translateY(70%);
         transform: translateY(70%);
@@ -85,7 +86,7 @@ ul.page-numbers .page-numbers:visited{
 -o-transition: opacity 0.5s linear;
 transition: opacity 0.5s linear;
 }
-.item--grid.layout--daft:hover  .wrapper--content,
+.item--grid.layout--daft:hover .wrapper--content,
 .item--grid.layout--daft:hover .item--link{
   -webkit-transform: translateY(0%);
     -ms-transform: translateY(0%);
