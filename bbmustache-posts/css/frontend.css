@@ -1,0 +1,96 @@
+.item--grid{
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center center;
+  position: relative;
+  display: block;
+}
+.item--grid:hover{
+  cursor: pointer;
+}
+.title--post-title{
+  margin: 0;
+}
+.item--link,
+.item--link:hover{
+  text-decoration: none;
+}
+.item--link{
+  display: block;
+}
+.list--posts{
+  list-style: none;
+  padding: 0;
+  display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+-webkit-box-pack: start;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+        -webkit-box-align: start;
+                -ms-flex-align: start;
+                    align-items: flex-start;
+-ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+-webkit-box-direction: normal;
+    -ms-flex-direction: row;
+        flex-direction: row;
+}
+.list--posts.equal-heights{
+  -ms-flex-line-pack: stretch;
+    align-content: stretch;
+}
+
+/* PAGINATION CSS */
+/* PAGINATION CSS */
+ul.page-numbers{
+  padding: 0;
+  list-style: none;
+}
+ul.page-numbers li,
+ul.page-numbers .page-numbers{
+  display: inline-block;
+}
+ul.page-numbers .page-numbers:hover,
+ul.page-numbers .page-numbers:focus,
+ul.page-numbers .page-numbers:visited{
+  text-decoration: none;
+}
+.pagination--left{
+  text-align: left;
+}
+.pagination--right{
+  text-align: right;
+}
+.pagination--center{
+  text-align: center;
+}
+
+/*  DAFT LAYOUT layout--daft*/
+.item--grid.layout--daft  .wrapper--content,
+.item--grid.layout--daft  .item--link{
+  -webkit-transform: translateY(70%);
+    -ms-transform: translateY(70%);
+        transform: translateY(70%);
+        -webkit-transition: -webkit-transform 0.5s cubic-bezier(.29,.06,.37,.63);
+    transition: -webkit-transform 0.5s cubic-bezier(.29,.06,.37,.63);
+    -o-transition: transform 0.5s cubic-bezier(.29,.06,.37,.63);
+    transition: transform 0.5s cubic-bezier(.29,.06,.37,.63);
+    transition: transform 0.5s cubic-bezier(.29,.06,.37,.63), -webkit-transform 0.5s cubic-bezier(.29,.06,.37,.63);
+}
+.item--grid.layout--daft .area--content{
+  opacity: 0;
+  -webkit-transition: opacity 0.5s linear;
+-o-transition: opacity 0.5s linear;
+transition: opacity 0.5s linear;
+}
+.item--grid.layout--daft:hover  .wrapper--content,
+.item--grid.layout--daft:hover .item--link{
+  -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+        transform: translateY(0%);
+}
+.item--grid.layout--daft:hover .area--content{
+  opacity: 1;
+}

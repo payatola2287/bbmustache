@@ -22,6 +22,7 @@ function grow_mustache(){
   if( class_exists( 'FLBuilder' ) ){
     include 'bbmustache-heading/bbmustache-heading.php';
     include 'bbmustache-text/bbmustache-text.php';
+    include 'bbmustache-posts/bbmustache-posts.php';
   }
 }
 /* Hook to init */
