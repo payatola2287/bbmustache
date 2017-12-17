@@ -8,11 +8,18 @@ class MustacheText extends FLBuilderModule {
     $instance_config = array(
       'name' => __( 'Mustache Text', 'fl-builder' ),
       'description' => __( 'Creative Text.','fl-builder' ),
-      'category' => __( 'Mustache Modules','fl-builder' ),
+      'category' => __( 'Standard Modules','fl-builder' ),
+      'group' => __( 'Mustache Modules','fl-builder' ),
       'dir' => BBMUSTACHE_MODULE_DIR . 'bbmustache-text/',
       'url' => BBMUSTACHE_MODULE_URL . 'bbmustache-text/'
     );
     parent::__construct( $instance_config );
+  }
+  public function color( $color_setting_field_value ){
+    if( strncmp($color_setting_field_value, "rgba", 4) === 0 ){
+      return $color_setting_field_value;
+    }
+    return "#".$color_setting_field_value;
   }
 }
 FLBuilder::register_module( 'MustacheText',array(
@@ -20,12 +27,36 @@ FLBuilder::register_module( 'MustacheText',array(
     'title' => __( 'Content','fl-builder' ),
     'sections' => array(
       'content-text-section' => array(
-        'title' => __( 'Text','fl-builder' ),
         'fields' => array(
           'content_text' => array(
             'type' => 'editor',
             'row' => 10,
-            'media_buttons' => false
+            'media_buttons' => true
+          )
+        )
+      ),
+      'text-alignment-section' => array(
+        'fields' => array(
+          'alignment' => array(
+            'type' => 'select',
+            'options' => array(
+              'left' => __( 'Left','fl-builder' ),
+              'right' => __( 'Right','fl-builder' ),
+              'center' => __( 'Center','fl-builder' )
+            ),
+            'label' => __( 'Text Alignment','fl-builder' ),
+            'default' => 'left'
+          ),
+          'transform' => array(
+            'type' => 'select',
+            'label' => __( 'Text Transform','fl-builder' ),
+            'default' => 'auto',
+            'options' => array(
+              'auto' => __( 'Default','fl-builder' ),
+              'lowercase' => __( 'lowercase','fl-builder' ),
+              'uppercase' => __( 'UPPERCASE','fl-builder' ),
+              'capitalize' => __( 'Capitalize','fl-builder' )
+            )
           )
         )
       )
@@ -35,13 +66,23 @@ FLBuilder::register_module( 'MustacheText',array(
     'title' => __( 'Style','fl-buider' ),
     'sections' => array(
       'colors-section' => array(
-        'title' => 'Text Color',
         'fields' => array(
           'p_color' => array(
             'type' => 'color',
             'label' => __( 'Text Color' ,'fl-builder' ),
             'default' => '333333',
-            'show_reset' => true
+            'show_reset' => true,
+            'preview' => array(
+              'type' =>'css',
+              'property' => 'color',
+              'selector' => '.bbmustache-text'
+            )
+          ),
+          'p_margin' => array(
+            'type' => 'dimension',
+            'label' => __( 'Margin','fl-builder' ),
+            'default' => '0',
+            'description' => __( 'Margins of each paragraph','fl-builder' )
           )
         )
       )
@@ -56,22 +97,25 @@ FLBuilder::register_module( 'MustacheText',array(
             'type' => 'font',
             'label' => __( 'Font','fl-builder' ),
             'default' => array(
-              'family' => 'Lato',
+              'family' => 'Default',
               'weight' => 400
             )
           ),
           'text_size' => array(
-            'type' => 'text',
+            'type' => 'unit',
             'label' => __( 'Font Size','fl-buider' ),
-            'default' => '16px'
+            'default' => '16',
+            'description' => 'px',
+            'responsive' => true
           ),
           'text_line_height' => array(
-            'type' => 'text',
+            'type' => 'unit',
             'label' => __( 'Font Size','fl-buider' ),
-            'default' => '1.5'
+            'default' => '1.5',
+            'responsive' => true
           )
         )
-      )
+      ),
     )
   )
 ) );

@@ -68,7 +68,6 @@ ul.page-numbers .page-numbers:visited{
 }
 
 /*  DAFT LAYOUT layout--daft */
-
 .item--grid.layout--daft .wrapper--content,
 .item--grid.layout--daft .item--link{
   -webkit-transform: translateY(70%);
