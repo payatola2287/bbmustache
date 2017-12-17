@@ -8,7 +8,7 @@ class MustachePosts extends FLBuilderModule{
     parent::__construct(array(
         'name'            => __( 'Mustache Posts', 'fl-builder' ),
         'description'     => __( 'Module to display list of posts', 'fl-builder' ),
-        'group'           => __( 'Mustache', 'fl-builder' ),
+        'group'           => __( 'Mustache Modules', 'fl-builder' ),
         'category'        => __( 'Standard Modules', 'fl-builder' ),
         'dir'             => BBMUSTACHE_MODULE_DIR . 'bbmustache-posts/',
         'url'             => BBMUSTACHE_MODULE_URL . 'bbmustache-posts/',
