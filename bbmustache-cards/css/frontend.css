@@ -1,0 +1,84 @@
+.card-title{
+  margin: 0;
+}
+.bbmustache-card{
+  position: relative;
+}
+.bbmustache-card .card-content-wrapper{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%,-50%,0);
+        transform: translate3d(-50%,-50%,0);
+}
+
+.bbmustache-cards-wrapper{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+}
+.bbmustache-card .card-link,
+.bbmustache-card .card-effect,
+.bbmustache-card .box-link:before,
+.bbmustache-card .card-effect:before{
+  display: block;
+}
+
+/*
+* JARED CARD LAYOUT
+*/
+.bbmustache-card.card-layout-jared{
+  text-align: center;
+  -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+        transform: scale(1);
+        -webkit-transition: -webkit-transform 0.35s;
+transition: -webkit-transform 0.35s;
+-o-transition: transform 0.35s;
+transition: transform 0.35s;
+transition: transform 0.35s, -webkit-transform 0.35s;
+}
+.bbmustache-card.card-layout-jared .card-content-wrapper{
+
+}
+.bbmustache-card.card-layout-jared:hover{
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
+          z-index: 2;
+}
+.bbmustache-card.card-layout-jared .box-link,
+.bbmustache-card.card-layout-jared .card-effect,
+.bbmustache-card.card-layout-jared .box-link:before,
+.bbmustache-card.card-layout-jared .card-effect:before{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+}
+.bbmustache-card.card-layout-jared .box-link:before,
+.bbmustache-card.card-layout-jared .card-effect:before{
+  top: 30px;
+  left: 30px;
+  right: 30px;
+  bottom: 30px;
+  -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+        transform: scale(0);
+        opacity: 0;
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+  content: "";
+}
+.bbmustache-card.card-layout-jared:hover .box-link:before,
+.bbmustache-card.card-layout-jared:hover .card-effect:before{
+  -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+}
