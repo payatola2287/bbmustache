@@ -3,7 +3,7 @@
  * Plugin Name: Beaver Builder Mustache Modules
  * Plugin URI: https://github.com/payatola2287/bbmustache
  * Description: Custom Modules for Beaver Page Builder
- * Version: 2.0.3
+ * Version: 2.0.4
  * Author Name: Paolo Gallardo
  * Author URI: http://paologallardo.com
 **/
@@ -29,6 +29,7 @@ function grow_mustache(){
     include 'bbmustache-text/bbmustache-text.php';
     include 'bbmustache-posts/bbmustache-posts.php';
     include 'bbmustache-cards/bbmustache-cards.php';
+    include 'bbmustache-search/bbmustache-search.php';
   }
 }
 /* Hook to init */
