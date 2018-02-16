@@ -44,12 +44,41 @@
 }
 
 /* DAFT LAYOUT ONLY CSS */
+<?php if( 'daft' == $settings->posts_layout ): ?>
 .fl-node-<?php echo $id; ?> .item--grid.layout--daft .wrapper--content,
 .fl-node-<?php echo $id; ?> .item--grid.layout--daft .item--link{
   padding: <?php echo absint( $settings->grid_item_padding_top ) . 'px ' . absint( $settings->grid_item_padding_right ) . 'px ' . absint( $settings->grid_item_padding_bottom ) . 'px ' . absint( $settings->grid_item_padding_left ) . 'px'; ?>;
   background-color: <?php echo $module->color( $settings->box_content_background ); ?>;
   height: 100%;
 }
+<?php endif; ?>
+/* NUTCRACKER LAYOUT ONLY CSS */
+<?php if( 'nutcracker' == $settings->posts_layout ): ?>
+.fl-node-<?php echo $id; ?> .item--grid.layout--nutcracker .wrapper--image-thumbnail{
+  border-color: <?php echo $module->color( $settings->figure_border_color ); ?>;
+  border-top-width: <?php echo $settings->figure_border_width_top; ?>px;
+  border-bottom-width: <?php echo $settings->figure_border_width_bottom; ?>px;
+  border-left-width: <?php echo $settings->figure_border_width_left; ?>px;
+  border-right-width: <?php echo $settings->figure_border_width_right; ?>px;
+  border-style: solid;
+  padding: <?php echo $settings->figure_padding_top; ?>px <?php echo $settings->figure_padding_right; ?>px <?php echo $settings->figure_padding_bottom; ?>px <?php echo $settings->figure_padding_left; ?>px;
+}
+.fl-node-<?php echo $id; ?> .item--grid.layout--nutcracker .image--thumbnail{
+  border-color: <?php echo $module->color( $settings->image_border_color ); ?>;
+  border-top-width: <?php echo $settings->image_border_width_top; ?>px;
+  border-bottom-width: <?php echo $settings->image_border_width_bottom; ?>px;
+  border-left-width: <?php echo $settings->image_border_width_left; ?>px;
+  border-right-width: <?php echo $settings->image_border_width_right; ?>px;
+  border-style: solid;
+}
+.fl-node-<?php echo $id; ?> .item--grid.layout--nutcracker:hover .wrapper--image-thumbnail .image--thumbnail{
+  border-color: <?php echo $module->color( $settings->image_hover_border_color ); ?>;
+}
+.fl-node-<?php echo $id; ?> .item--grid.layout--nutcracker:hover .wrapper--image-thumbnail:before{
+  background-color: <?php echo $module->color( $settings->image_hover_overlay_color ); ?>
+
+}
+<?php endif; ?>
 @media screen and (min-width: <?php echo $global_settings->responsive_breakpoint; ?>px){
   .fl-node-<?php echo $id; ?> .item--grid{
     width: calc( <?php echo 100 / absint( $settings->columns_count_medium ); ?>% - <?php echo absint( $settings->grid_item_spacing_right ) + absint( $settings->grid_item_spacing_left ); ?>% );

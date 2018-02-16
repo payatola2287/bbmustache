@@ -39,9 +39,22 @@ FLBuilder::register_module( 'MustachePosts', apply_filters(
               'type' => 'select',
               'label' => __( 'Style','fl-builder' ),
               'options' => array(
-                'daft' => __( 'Style 1' ,'fl-builder'),// Add more in the future releases
+                'daft' => __( 'Style 1' ,'fl-builder'),
+                'nutcracker' => __( 'Style 2','fl-builder' ),// Add more in the future releases
               ),
               'default' => 'daft',
+              'toggle' => array(
+                'nutcracker' => array(
+                  'sections' => array(
+                    'image_style_section'
+                  )
+                ),
+                'daft' => array(
+                  'fields' => array(
+                    'display_image'
+                  )
+                )
+              )
             ),
             'posts_per_page' => array(
               'type' => 'unit',
@@ -299,7 +312,56 @@ FLBuilder::register_module( 'MustachePosts', apply_filters(
               'show_alpha' => true
             )
           )
-        ),
+        ), // end of box_section section
+        'image_style_section' => array(
+          'title' => __( 'Image','fl-builder' ),
+          'fields' => array(
+            'figure_border_color' => array(
+              'type' => 'color',
+              'default' => 'aaa',
+              'show_reset' => true,
+              'label' => __( 'Container Border Color','fl-builder' ),
+            ),
+            'figure_border_width' => array(
+              'type' => 'dimension',
+              'default' => 1,
+              'label' => __( 'Container Border Width','fl-builder' ),
+              'desc' => 'px'
+            ),
+            'figure_padding' => array(
+              'type' => 'dimension',
+              'default' => 0,
+              'label' => __( 'Container Padding','fl-builder' ),
+              'desc' => 'px'
+            ),
+            'image_border_color' => array(
+              'type' => 'color',
+              'default' => 'fff',
+              'show_reset' => true,
+              'label' => __( 'Image Border Color','fl-builder' ),
+            ),
+            'image_border_width' => array(
+              'type' => 'dimension',
+              'default' => 1,
+              'label' => __( 'Image Border Width','fl-builder' ),
+              'desc' => 'px'
+            ),
+            'image_hover_overlay_color' => array(
+              'type' => 'color',
+              'default' => 'fff',
+              'show_reset' => true,
+              'show_alpha' => true,
+              'label' => __( 'Hover Overlay Color','fl-builder' ),
+            ),
+            'image_hover_border_color' => array(
+              'type' => 'color',
+              'default' => 'fff',
+              'show_reset' => true,
+              'show_alpha' => true,
+              'label' => __( 'Hover Border Color','fl-builder' ),
+            ),
+          )
+        ), // end of image_style_section
       )
     ),
     'pagination_tab' => array(

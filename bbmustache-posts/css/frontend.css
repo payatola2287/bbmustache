@@ -1,8 +1,20 @@
+.wrapper--image-thumbnail,
+.item--grid,
+.image--thumbnail{
+  position: relative;
+}
+.layout--nutcracker .wrapper--image-thumbnail:before{
+  position: absolute;
+}
+.layout--nutcracker .wrapper--image-thumbnail:before{
+  content: "";
+  display: block;
+}
+
 .item--grid{
   background-repeat: no-repeat;
   background-size:cover;
   background-position: center center;
-  position: relative;
   display: block;
 }
 .item--grid:hover{
@@ -92,5 +104,30 @@ transition: opacity 0.5s linear;
         transform: translateY(0%);
 }
 .item--grid.layout--daft:hover .area--content{
+  opacity: 1;
+}
+
+/* NUTCRACKER STYLES */
+.layout--nutcracker .image--thumbnail{
+  z-index: 1;
+  -webkit-transition: border-color 0.4s linear;
+-o-transition: border-color 0.4s linear;
+transition: border-color 0.4s linear;
+}
+.layout--nutcracker .wrapper--image-thumbnail{
+  text-align: center;
+}
+.layout--nutcracker .wrapper--image-thumbnail:before{
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s linear;
+-o-transition: opacity 0.4s linear;
+transition: opacity 0.4s linear;
+}
+.layout--nutcracker:hover .wrapper--image-thumbnail:before{
   opacity: 1;
 }
