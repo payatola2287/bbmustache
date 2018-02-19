@@ -8,7 +8,7 @@
 .fl-node-<?php echo $id; ?> .item--grid{
   width: calc( 100% - <?php echo absint( $settings->grid_item_spacing_right ) + absint( $settings->grid_item_spacing_left ); ?>% );
   margin: <?php echo absint( $settings->grid_item_spacing_top ) . '% ' . absint( $settings->grid_item_spacing_right ) . '% ' . absint( $settings->grid_item_spacing_bottom ) . '% ' . absint( $settings->grid_item_spacing_left ) . '%'; ?>;
-  <?php if( 'no' == $settings->equal_heights ): ?>
+  <?php if( 'yes' == $settings->equal_heights ): ?>
     height: <?php echo ( '' != $settings->column_height_responsive ) ? absint( $settings->column_height_responsive ) : absint( $settings->column_height ); ?>px;
   <?php endif; ?>
 

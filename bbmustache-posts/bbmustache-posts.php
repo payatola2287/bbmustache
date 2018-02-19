@@ -83,7 +83,7 @@ FLBuilder::register_module( 'MustachePosts', apply_filters(
               ),
               'default' => 'no',
               'toggle' => array(
-                'no' => array(
+                'yes' => array(
                   'fields' => array( 'column_height' )
                 )
               )
