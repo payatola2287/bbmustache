@@ -2,7 +2,7 @@
 Beaver Builder Mustache is a classy custom modules for Beaver Page Builder.
 
 # Version
-2.0.3
+2.0.6
 
 # Modules
 ## Heading Module

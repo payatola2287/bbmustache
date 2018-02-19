@@ -231,7 +231,7 @@ FLBuilder::register_module( 'MustachePosts', apply_filters(
       )
     ),
     'posts_tab' => array(
-      'title' => __( 'Posts','fl-builder' ),
+      'title' => __( 'Content','fl-builder' ),
       'file' => FL_BUILDER_DIR . 'includes/loop-settings.php'
     ),
     'styling_tab' => array(

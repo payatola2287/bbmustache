@@ -22,9 +22,9 @@
   font-size: <?php echo ( '' == $settings->title_size_responsive ) ? ( '' == $settings->title_size_medium ) ? absint( $settings->title_size ): absint( $settings->title_size_medium ) : absint( $settings->title_size_responsive ); ?>px;
 }
 .fl-node-<?php echo $id; ?> .item--grid .area--content{
-  color: <?php echo $module->color( $settings->title_color ); ?>;
-  font-family: <?php echo ( 'Default' == $settings->title_font['family'] ) ? 'inherit':$settings->title_font['family'] ;?>;
-  font-size: <?php echo ( '' == $settings->title_size_responsive ) ? ( '' == $settings->title_size_medium ) ? absint( $settings->title_size ): absint( $settings->title_size_medium ) : absint( $settings->title_size_responsive ); ?>px;
+  color: <?php echo $module->color( $settings->content_color ); ?>;
+  font-family: <?php echo ( 'Default' == $settings->content_font['family'] ) ? 'inherit':$settings->content_font['family'] ;?>;
+  font-size: <?php echo ( '' == $settings->content_size_responsive ) ? ( '' == $settings->content_size_medium ) ? absint( $settings->content_size ): absint( $settings->content_size_medium ) : absint( $settings->content_size_responsive ); ?>px;
 }
 
 /* PAGINATION CSS */
