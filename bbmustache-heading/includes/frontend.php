@@ -6,5 +6,5 @@
 ?>
 <div class="bbmustache-fancy-heading-holder" id="<?php echo $module->node; ?>">
   <<?php echo $html_tag; ?> class="bbmustache-text-bg"><?php echo $bg_text; ?></<?php echo $html_tag; ?>>
-  <?php echo $p; ?>
+  <?php if( '' != $p ) echo apply_filters( 'the_content', $p ); ?>
 </div>
