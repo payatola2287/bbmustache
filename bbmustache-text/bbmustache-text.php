@@ -110,7 +110,7 @@ FLBuilder::register_module( 'MustacheText',array(
           ),
           'text_line_height' => array(
             'type' => 'unit',
-            'label' => __( 'Font Size','fl-buider' ),
+            'label' => __( 'Line Height','fl-buider' ),
             'default' => '1.5',
             'responsive' => true
           )
