@@ -45,6 +45,15 @@
 
 /* DAFT LAYOUT ONLY CSS */
 <?php if( 'daft' == $settings->posts_layout ): ?>
+.fl-node-<?php echo $id; ?> .item--grid.layout--daft{
+  background-position: <?php echo str_replace( '-', ' ', $settings->background_image_position ); ?>;
+
+  <?php if( 'custom' == $settings->background_image_size ): ?>
+    background-size: <?php echo $settings->background_image_custom_size_width . ' ' . $settings->background_image_custom_size_height ; ?>
+  <?php else: ?>
+    background-size: <?php echo $settings->background_image_size; ?>;
+  <?php endif; ?>
+}
 .fl-node-<?php echo $id; ?> .item--grid.layout--daft .wrapper--content,
 .fl-node-<?php echo $id; ?> .item--grid.layout--daft .item--link{
   padding: <?php echo absint( $settings->grid_item_padding_top ) . 'px ' . absint( $settings->grid_item_padding_right ) . 'px ' . absint( $settings->grid_item_padding_bottom ) . 'px ' . absint( $settings->grid_item_padding_left ) . 'px'; ?>;
@@ -82,7 +91,7 @@
 @media screen and (min-width: <?php echo $global_settings->responsive_breakpoint; ?>px){
   .fl-node-<?php echo $id; ?> .item--grid{
     width: calc( <?php echo 100 / absint( $settings->columns_count_medium ); ?>% - <?php echo absint( $settings->grid_item_spacing_right ) + absint( $settings->grid_item_spacing_left ); ?>% );
-    <?php if( 'no' == $settings->equal_heights ): ?>
+    <?php if( 'yes' == $settings->equal_heights ): ?>
       height: <?php echo ( '' != $settings->column_height_medium ) ? absint( $settings->column_height_medium ) : absint( $settings->column_height ); ?>px;
     <?php endif; ?>
   }
@@ -96,7 +105,7 @@
 @media screen and (min-width: <?php echo $global_settings->medium_breakpoint; ?>px){
   .fl-node-<?php echo $id; ?> .item--grid{
     width: calc( <?php echo 100 / absint( $settings->columns_count ); ?>% - <?php echo absint( $settings->grid_item_spacing_right ) + absint( $settings->grid_item_spacing_left ); ?>% );
-    <?php if( 'no' == $settings->equal_heights ): ?>
+    <?php if( 'yes' == $settings->equal_heights ): ?>
       height: <?php echo absint( $settings->column_height ); ?>px;
     <?php endif; ?>
   }

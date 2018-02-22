@@ -13,8 +13,8 @@
 
 .item--grid{
   background-repeat: no-repeat;
-  background-size:cover;
-  background-position: center center;
+  /*background-size:cover;
+  background-position: center center;*/
   display: block;
 }
 .item--grid:hover{

@@ -46,12 +46,14 @@ FLBuilder::register_module( 'MustachePosts', apply_filters(
               'toggle' => array(
                 'nutcracker' => array(
                   'sections' => array(
-                    'image_style_section'
+                    'image_style_section',
+
                   )
                 ),
                 'daft' => array(
                   'fields' => array(
-                    'display_image'
+                    'display_image',
+                    'background_style_section'
                   )
                 )
               )
@@ -313,6 +315,56 @@ FLBuilder::register_module( 'MustachePosts', apply_filters(
             )
           )
         ), // end of box_section section
+        'background_style_section' => array(
+          'title' => __( 'Background Image','fl-builder' ),
+          'fields' => array(
+            'background_image_size' => array(
+              'type' => 'select',
+              'label' => __( 'Background Image Size','fl-builder' ),
+              'options' => array(
+                'default' => __( 'Default','fl-builder' ),
+                'contain' => __( 'Fit','fl-builder' ),
+                'cover' => __( 'Fill','fl-builder' ),
+                'custom' => __( 'Custom','fl-builder' )
+              ),
+              'default' => 'cover',
+              'toggle' => array(
+                'custom' => array(
+                  'fields' => array( 'background_image_custom_size_width',
+                'background_image_custom_size_height' )
+                )
+              )
+            ), // end of background_image_size field
+            'background_image_custom_size_width' => array(
+              'type' => 'text',
+              'label' => __( 'Background Image Width','fl-builder' ),
+              'desc' => __( 'include units, em px %','fl-builder' ),
+              'default' => 'auto'
+            ), // end of background_image_custom_size_width field
+            'background_image_custom_size_height' => array(
+              'type' => 'text',
+              'label' => __( 'Background Image Height','fl-builder' ),
+              'desc' => __( 'include units, em px %','fl-builder' ),
+              'default' => 'auto'
+            ), // end of background_image_custom_size_height field
+            'background_image_position' => array(
+              'type' => 'select',
+              'label' => __( 'Position','fl-builder' ),
+              'options' => array(
+                'left-top' => __( 'Left Top','fl-builder' ),
+                'center-top' => __( 'Center Top','fl-builder' ),
+                'right-top' => __( 'Right Top','fl-buider' ),
+                'left-center' => __( 'Left Center','fl-builder' ),
+                'center-center' => __( 'Center Center','fl-builder' ),
+                'right-center' => __( 'Right Center','fl-builder' ),
+                'left-bottom' => __( 'Left Bottom','fl-builder' ),
+                'center-bottom' => __( 'Center Bottom','fl-builder' ),
+                'right-bottom' => __( 'Right Bottom','fl-builder' )
+              ),
+              'default' => 'center-center'
+            ), // end of background_image_position field
+          )
+        ), // end of backgkround_style_section section
         'image_style_section' => array(
           'title' => __( 'Image','fl-builder' ),
           'fields' => array(
