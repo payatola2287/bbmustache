@@ -18,6 +18,9 @@
   text-transform: <?php echo $settings->transform; ?>;
   margin: <?php echo  intval( $settings->p_margin_top ); ?>px <?php echo intval( $settings->p_margin_right ); ?>px <?php echo intval( $settings->p_margin_bottom ); ?>px <?php echo intval( $settings->p_margin_left ); ?>px;
 }
+.fl-node-<?php echo $id; ?> .bbmustache-module-wrapper .bbmustache-text:last-of-type{
+  margin-bottom: 0;
+}
 @media screen and ( min-width: <?php echo $global_settings->responsive_breakpoint; ?>px ){
   .fl-node-<?php echo $id; ?> .bbmustache-module-wrapper .bbmustache-text{
     font-size: <?php echo ( '' == $med_text_size ) ? $med_text_size : $text_size; ?>px;
