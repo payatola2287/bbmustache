@@ -8,6 +8,7 @@ class MustacheHCards extends FLBuilderModule {
     $instance_config = array(
       'name' => __( 'Mustache Cards', 'fl-builder' ),
       'category' => __( 'Creative Modules','fl-builder' ),
+      'icon' => 'layout.svg',
       'group' => __( 'Mustache Modules','fl-builder' ),
       'dir' => BBMUSTACHE_MODULE_DIR . 'bbmustache-cards/',
       'url' => BBMUSTACHE_MODULE_URL . 'bbmustache-cards/'

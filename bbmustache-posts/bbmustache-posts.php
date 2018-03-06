@@ -12,6 +12,7 @@ class MustachePosts extends FLBuilderModule{
         'category'        => __( 'Content Modules', 'fl-builder' ),
         'dir'             => BBMUSTACHE_MODULE_DIR . 'bbmustache-posts/',
         'url'             => BBMUSTACHE_MODULE_URL . 'bbmustache-posts/',
+        'icon' => 'layout.svg',
         'editor_export'   => true, // Defaults to true and can be omitted.
         'enabled'         => true, // Defaults to true and can be omitted.
         'partial_refresh' => false, // Defaults to false and can be omitted.

@@ -5,6 +5,7 @@
  class BBMustacheSearch extends FLBuilderModule {
    public function __construct() {
      parent::__construct(array(
+            'icon' => 'arrow-right.svg',
             'name'            => __( 'Search', 'fl-builder' ),
             'description'     => __( 'Customizeble Search form', 'fl-builder' ),
             'group'           => __( 'Mustache Modules', 'fl-builder' ),

@@ -11,7 +11,8 @@ class MustacheText extends FLBuilderModule {
       'category' => __( 'Content Modules','fl-builder' ),
       'group' => __( 'Mustache Modules','fl-builder' ),
       'dir' => BBMUSTACHE_MODULE_DIR . 'bbmustache-text/',
-      'url' => BBMUSTACHE_MODULE_URL . 'bbmustache-text/'
+      'url' => BBMUSTACHE_MODULE_URL . 'bbmustache-text/',
+      'icon' => 'text.svg',
     );
     parent::__construct( $instance_config );
   }
