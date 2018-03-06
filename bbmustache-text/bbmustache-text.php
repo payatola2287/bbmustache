@@ -7,8 +7,8 @@ class MustacheText extends FLBuilderModule {
   public function __construct(){
     $instance_config = array(
       'name' => __( 'Mustache Text', 'fl-builder' ),
-      'description' => __( 'Creative Text.','fl-builder' ),
-      'category' => __( 'Standard Modules','fl-builder' ),
+      'description' => __( 'Normal Text Content','fl-builder' ),
+      'category' => __( 'Content Modules','fl-builder' ),
       'group' => __( 'Mustache Modules','fl-builder' ),
       'dir' => BBMUSTACHE_MODULE_DIR . 'bbmustache-text/',
       'url' => BBMUSTACHE_MODULE_URL . 'bbmustache-text/'

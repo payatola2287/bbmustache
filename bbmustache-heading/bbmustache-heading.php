@@ -1,16 +1,17 @@
 <?php
 /**
  * Module Name: Mustache Heading
- * Version: 2.0
+ * Version: 2.1
 **/
 class MustacheHeading extends FLBuilderModule {
   public function __construct(){
     $instance_config = array(
       'name' => __( 'Mustache Heading', 'fl-builder' ),
-      'description' => __( 'Creative Heading.','fl-builder' ),
-      'category' => __( 'Mustache Modules','fl-builder' ),
+      'description' => __( 'Text content heading','fl-builder' ),
+      'category' => __( 'Content Modules','fl-builder' ),
       'dir' => BBMUSTACHE_MODULE_DIR . 'bbmustache-heading/',
-      'url' => BBMUSTACHE_MODULE_URL . 'bbmustache-heading/'
+      'url' => BBMUSTACHE_MODULE_URL . 'bbmustache-heading/',
+      'group' => __( 'Mustache Modules','fl-builder' )
     );
     parent::__construct( $instance_config );
   }
@@ -33,6 +34,7 @@ FLBuilder::register_module( 'MustacheHeading', array(
               'h4' => __( 'H4','fl-builder' ),
               'h5' => __( 'H5','fl-builder' ),
               'h6' => __( 'H6','fl-builder' ),
+              'div' => __( 'DIV','fl-builder' )
             )
           )
         )
@@ -42,6 +44,7 @@ FLBuilder::register_module( 'MustacheHeading', array(
         'fields' => array(
           'bg_text_field' => array(
             'type' => 'text',
+            'label' => __( 'Heading Text','fl-builder' )
           ),
         )
       ),
@@ -51,7 +54,7 @@ FLBuilder::register_module( 'MustacheHeading', array(
           'main_text_field' => array(
             'type' => 'editor',
             'row' => 10,
-            'media_buttons' => false
+            'media_buttons' => true
           )
         )
       )
@@ -61,13 +64,30 @@ FLBuilder::register_module( 'MustacheHeading', array(
     'title' => __( 'Style','fl-builder' ),
     'sections' => array(
       'background-text-styling-section' => array(
-        'title' => __( 'Background Text Style','fl-builder' ),
+        'title' => __( 'Heading Text Style','fl-builder' ),
         'fields' => array(
+          'bg_text_margin' => array(
+            'type' => 'dimension',
+            'responsive' => true,
+            'label' => __( 'Margins','fl-builder' ),
+            'default' => '5',
+            'description' => 'px',
+            'preview' => array(
+              'type' => 'css',
+              'selector' => '.bbmustache-text-bg',
+              'property' => 'margin'
+            )
+          ),
           'bg_text_color' => array(
             'type' => 'color',
             'label' => __( 'Text Color' ,'fl-builder' ),
             'default' => '333333',
-            'show_reset' => true
+            'show_reset' => true,
+            'preview' => array(
+              'type' => 'css',
+              'property' => 'color',
+              'selector' => '.bbmustache-text-bg'
+            )
           ),
           'bg_text_align' => array(
             'type' => 'select',
@@ -77,6 +97,11 @@ FLBuilder::register_module( 'MustacheHeading', array(
               'center' => __( 'Center Align Text','fl-builder' ),
               'left' => __( 'Left Align Text','fl-builder' ),
               'right' => __( 'Right Align Text','fl-builder' )
+            ),
+            'preview' => array(
+              'type' => 'css',
+              'property' => 'text-align',
+              'selector' => '.bbmustache-text-bg'
             )
           ),
           'bg_text_transform' => array(
@@ -88,6 +113,11 @@ FLBuilder::register_module( 'MustacheHeading', array(
               'uppercase' => __( 'UPPERCASE','fl-builder' ),
               'capitalize' => __( 'Capitalize','fl-builder' ),
               'lowercase' => __( 'lowercase','fl-builder' )
+            ),
+            'preview' => array(
+              'type' => 'css',
+              'property' => 'text-transform',
+              'selector' => '.bbmustache-text-bg'
             )
           )
         )
@@ -99,7 +129,7 @@ FLBuilder::register_module( 'MustacheHeading', array(
             'type' => 'color',
             'label' => __( 'Text Color' ,'fl-builder' ),
             'default' => '333333',
-            'show_reset' => true
+            'show_reset' => true,
           ),
           'main_text_align' => array(
             'type' => 'select',
@@ -141,19 +171,22 @@ FLBuilder::register_module( 'MustacheHeading', array(
             )
           ),
           'bg_text_size' => array(
-            'type' => 'text',
+            'type' => 'unit',
             'label' => __( 'Font Size','fl-builder' ),
-            'default' => '48px'
+            'default' => '48',
+            'responsive' => true,
+            'description' => 'px'
           ),
           'bg_text_line_height' => array(
-            'type' => 'text',
+            'type' => 'unit',
             'label' => __( 'Line Height','fl-builder' ),
-            'default' => '1.5'
+            'default' => '1.5',
+            'responsive' => true,
           ),
           'bg_text_letter_spacing' => array(
-            'type' => 'text',
+            'type' => 'unit',
             'label' => __( 'Letter Spacing','fl-buidler' ),
-            'default' => '0px'
+            'default' => '0',
           )
         )
       ),
@@ -169,14 +202,16 @@ FLBuilder::register_module( 'MustacheHeading', array(
             )
           ),
           'main_text_size' => array(
-            'type' => 'text',
+            'type' => 'unit',
             'label' => __( 'Font Size','fl-builder' ),
-            'default' => '32px'
+            'default' => '32',
+            'responsive' => true
           ),
           'main_text_line_height' => array(
             'type' => 'text',
             'label' => __( 'Line Height','fl-builder' ),
-            'default' => '1.5'
+            'default' => '1.5',
+            'responsive' => true
           ),
         )
       )

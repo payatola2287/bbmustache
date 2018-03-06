@@ -9,7 +9,7 @@ class MustachePosts extends FLBuilderModule{
         'name'            => __( 'Mustache Posts', 'fl-builder' ),
         'description'     => __( 'Module to display list of posts', 'fl-builder' ),
         'group'           => __( 'Mustache Modules', 'fl-builder' ),
-        'category'        => __( 'Standard Modules', 'fl-builder' ),
+        'category'        => __( 'Content Modules', 'fl-builder' ),
         'dir'             => BBMUSTACHE_MODULE_DIR . 'bbmustache-posts/',
         'url'             => BBMUSTACHE_MODULE_URL . 'bbmustache-posts/',
         'editor_export'   => true, // Defaults to true and can be omitted.

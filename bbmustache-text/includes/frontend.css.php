@@ -10,13 +10,15 @@
 ?>
 .fl-node-<?php echo $id; ?> .bbmustache-module-wrapper .bbmustache-text{
   line-height: <?php echo $text_line_height; ?>;
-  color: #<?php echo $p_color; ?>;
   font-family: <?php echo $text_fam; ?>;
   font-weight: <?php echo $text_weight; ?>;
   font-size: <?php echo ( '' == $sm_text_size ) ? ( '' == $med_text_size ) ? $med_text_size : $text_size : $sm_text_size; ?>px;
   text-align: <?php echo $settings->alignment; ?>;
   text-transform: <?php echo $settings->transform; ?>;
   margin: <?php echo  intval( $settings->p_margin_top ); ?>px <?php echo intval( $settings->p_margin_right ); ?>px <?php echo intval( $settings->p_margin_bottom ); ?>px <?php echo intval( $settings->p_margin_left ); ?>px;
+}
+.fl-node-<?php echo $id; ?> .bbmustache-module-wrapper{
+  color: #<?php echo $p_color; ?>;
 }
 .fl-node-<?php echo $id; ?> .bbmustache-module-wrapper .bbmustache-text:last-of-type{
   margin-bottom: 0;
