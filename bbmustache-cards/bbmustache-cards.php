@@ -7,6 +7,7 @@ class MustacheHCards extends FLBuilderModule {
   public function __construct(){
     $instance_config = array(
       'name' => __( 'Mustache Cards', 'fl-builder' ),
+      'description' => __( 'Classy & creative hover cards.','fl-builder' ),
       'category' => __( 'Creative Modules','fl-builder' ),
       'icon' => 'layout.svg',
       'group' => __( 'Mustache Modules','fl-builder' ),
@@ -46,7 +47,7 @@ FLBuilder::register_module( 'MustacheHCards', apply_filters( 'bbmustache_cards_s
           'columns' => array(
               'type' => 'unit',
               'label' => __( 'Columns','fl-builder' ),
-              'description' => 'column/s',
+              'description' => 'columns',
               'responsive' => true
           ), // End of columns field
           'card_height' => array(
