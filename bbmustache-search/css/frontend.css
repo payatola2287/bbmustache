@@ -1,9 +1,18 @@
-.bbmustache-search-form{
+.bbmustache-search-form.inline{
   display: -webkit-box;
  display: -ms-flexbox;
  display: flex;
 -ms-flex-wrap: wrap;
  flex-wrap: wrap;
+}
+.bbmustache-search-form.inline .field-label{
+  -webkit-box-flex: 3;
+    -ms-flex: 3 1 auto;
+        flex: 3 1 auto;
+}
+.bbmustache-search-form .field-label .search-field{
+  width: 100%;
+  height: 100%;
 }
  .bbmustache-search-form.field-left {
   -webkit-box-pack: start;

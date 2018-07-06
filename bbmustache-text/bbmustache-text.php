@@ -39,13 +39,8 @@ FLBuilder::register_module( 'MustacheText',array(
       'text-alignment-section' => array(
         'fields' => array(
           'alignment' => array(
-            'type' => 'select',
-            'options' => array(
-              'left' => __( 'Left','fl-builder' ),
-              'right' => __( 'Right','fl-builder' ),
-              'center' => __( 'Center','fl-builder' )
-            ),
-            'label' => __( 'Text Alignment','fl-builder' ),
+            'type' => 'align',
+            'label' => 'Text Alignment',
             'default' => 'left'
           ),
           'transform' => array(

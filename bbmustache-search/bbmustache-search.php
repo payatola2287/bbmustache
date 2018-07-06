@@ -31,12 +31,30 @@
      }
      return $class;
    }
+   public function layout_class( $layout ){
+     $class = ($layout == 'inline')?"inline":"stacked";
+     return $class;
+   }
  }
 
  FLBuilder::register_module( 'BBMustacheSearch',array(
    'general-tab' => array(
      'title' => __( 'General','fl-builder' ),
      'sections' => array(
+       'layout_section' => array(
+         'title' => __( 'Layout','fl-builder' ),
+         'fields' => array(
+           'form_layout' => array(
+             'type' => 'bbm-radio',
+             'label' => __( 'Layout','fl-builder' ),
+             'options' => array(
+               'inline' => __( 'Inline','fl-builder' ),
+               'stacked' => __( 'Stacked','fl-builder' )
+             ),
+             'default' => 'inline',
+           ),// end of form_layout field
+         )
+       ), // end of layout_section section
        'content_section' => array(
          'title' => __( 'Content','fl-builder' ),
          'fields' => array(
@@ -47,6 +65,17 @@
            ),
          )
        ), // end of content_section section
+       'types_section' => array(
+         'title' => __( 'Post Types','fl-builder' ),
+         'fields' => array(
+           'post_types' => array(
+             'type' => 'text',
+             'label' => __( 'Post Types','fl-builder' ),
+             'multiple' => true,
+             'description' => __( 'Posts are included by default. Use post type slug.','fl-builder' )
+           )
+         )
+       ), // end of types_section section
      )
    ), // end of general-tab tab
    'style-tab' => array(
@@ -74,24 +103,25 @@
          'fields' => array(
            'text_color' => array(
              'type' => 'color',
-             'default' => '000',
+             'default' => '333',
              'show_reset' => true,
              'show_alpha' => true,
              'label' => __( 'Text Color','fl-builder' ),
            ),
            'text_background_color' => array(
              'type' => 'color',
-             'default' => '000',
+             'default' => '',
              'show_reset' => true,
              'show_alpha' => true,
              'label' => __( 'Background Color','fl-builder' ),
            ),
            'input_border_position' => array(
-             'type' => 'select',
+             'type' => 'bbm-radio',
              'options' => array(
                'box' => __( 'Default','fl-builder' ),
                'underline' => __( 'Underline','fl-builder' )
              ),
+             'default' => 'box',
              'label' => __( 'Border Position','fl-builder' )
            ),
            'input_border_width' => array(
