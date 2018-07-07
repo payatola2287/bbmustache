@@ -7,9 +7,14 @@
   $med_heading_size = intval( $settings->heading_size_medium );
   $sm_heading_size = intval( $settings->heading_size_responsive );
 ?>
-
+.fl-node-<?php echo $id; ?> .bbm-toggle-wrapper div.bbm-menu-toggle .bbm-toggle-text{
+  color: <?php echo $module->color( $settings->menu_toggle_color ); ?>;
+}
+.fl-node-<?php echo $id; ?> .bbm-toggle-wrapper div.bbm-menu-toggle .bbm-toggle-line{
+  background-color: <?php echo $module->color( $settings->menu_toggle_color ); ?>;
+}
 .fl-node-<?php echo $id; ?> .bbm-menu-wrapper:before{
-  background: <?php echo $settings->menu_background; ?>;
+  background: <?php echo $module->color( $settings->menu_background ); ?>;
 }
 <?php if( $settings->toggle_layout == 'left-inline' ): ?>
 .fl-node-<?php echo $id; ?> .bbm-menu-toggle-left-inline .bbm-toggle-line-wrapper{
