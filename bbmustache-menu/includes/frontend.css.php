@@ -13,19 +13,37 @@
 .fl-node-<?php echo $id; ?> .bbm-toggle-wrapper div.bbm-menu-toggle .bbm-toggle-line{
   background-color: <?php echo $module->color( $settings->menu_toggle_color ); ?>;
 }
+.fl-node-<?php echo $id; ?> .bbm-close{
+  <?php if( $settings->menu_alignment == 'right' ): ?>
+    margin-right: <?php echo $settings->link_padding_right.$settings->link_padding_unit; ?>;
+  <?php elseif( $settings->menu_alignment == 'left' ): ?>
+    margin-left: <?php echo $settings->link_padding_right.$settings->link_padding_unit; ?>;
+  <?php endif; ?>
+  margin-top: 75px;
+  font-family: <?php echo $settings->toggle_text_fam['family']; ?>;
+}
+
 .fl-node-<?php echo $id; ?> .bbm-menu-wrapper:before{
   background: <?php echo $module->color( $settings->menu_background ); ?>;
 }
 <?php if( $settings->toggle_layout == 'left-inline' ): ?>
-.fl-node-<?php echo $id; ?> .bbm-menu-toggle-left-inline .bbm-toggle-line-wrapper{
+.fl-node-<?php echo $id; ?> .bbm-toggle-left-inline .bbm-toggle-line-wrapper{
   margin-left: <?php echo $settings->text_icon_spacing; ?>px;
 }
 <?php endif; ?>
 <?php if( $settings->toggle_layout == 'right-inline' ): ?>
-.fl-node-<?php echo $id; ?> .bbm-menu-toggle-right-inline .bbm-toggle-line-wrapper{
+.fl-node-<?php echo $id; ?> .bbm-toggle-right-inline .bbm-toggle-line-wrapper{
   margin-right: <?php echo $settings->text_icon_spacing; ?>px;
 }
 <?php endif; ?>
+<?php if( $settings->use_logo == true ): ?>
+  .fl-node-<?php echo $id; ?> .bbm-menu-logo{
+    margin-top: 45px;
+  }
+<?php endif; ?>
+.fl-node-<?php echo $id; ?> .bbm-wrapper{
+  margin-top: <?php echo ( $settings->use_logo == true ) ? '5px' : ( $settings->layout_style == 'mushroom' ) ? '45px':'105px' ; ?>;
+}
 .fl-node-<?php echo $id; ?> .bbm-menu li.heading span{
   display: inline-block;
   padding: <?php

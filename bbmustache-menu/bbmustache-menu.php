@@ -27,6 +27,19 @@ FLBuilder::register_module( 'MustacheMenu',array(
   'content-tab' => array(
     'title' => __( 'Content','fl-builder' ),
     'sections' => array(
+      'layout-style-section' => array(
+        'fields' => array(
+          'layout_style' => array(
+            'type' => 'select',
+            'default' => 'style-0',
+            'label' => __( 'Select Style','fl-builder' ),
+            'options' => array(
+              'acacia' => __( 'Style 0','fl-builder' ),
+              'mushroom' => __( 'Style 1','fl-builder' )
+            )
+          ), // end of layout_style field
+        )
+      ), // end of layout-style-section section
       'content-text-section' => array(
         'title' => __( 'Content','f-builder' ),
         'fields' => array(
@@ -264,7 +277,7 @@ FLBuilder::register_module( 'MustacheMenu',array(
               ),// end of link_color field
               'link_hover' => array(
                 'type' => 'color',
-                'label' => __( 'Text Color','fl-builder' ),
+                'label' => __( 'Text Hover Color','fl-builder' ),
                 'show_reset' => true,
                 'default' => "fefefe"
               ), // end of link_hover field
@@ -277,7 +290,7 @@ FLBuilder::register_module( 'MustacheMenu',array(
               ), // end of link_background field
               'link_hover_background' => array(
                 'type' => 'color',
-                'label' => __( 'Background Color','fl-builder' ),
+                'label' => __( 'Background Hover Color','fl-builder' ),
                 'show_reset' => true,
                 'default' => "fff",
                 'show_alpha' => true
