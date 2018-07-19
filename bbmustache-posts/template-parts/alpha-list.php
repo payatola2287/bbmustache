@@ -4,7 +4,7 @@
 ?>
 <li class="item--grid item--post-<?php echo get_the_ID(); ?> layout--alpha-list">
   <?php if( $settings->link_type == 'box' ): ?>
-    <a href="<?php echo get_the_permalink(); ?>" title="<?php echo get_the_title(); ?>"></a>
+    <a href="<?php echo get_the_permalink(); ?>" title="<?php echo get_the_title(); ?>" class="link--box-link"></a>
   <?php endif; ?>
   <header class="item--list-header">
     <h3 class="title--post-title" >
