@@ -41,20 +41,31 @@ FLBuilder::register_module( 'MustachePosts', apply_filters(
               'label' => __( 'Style','fl-builder' ),
               'options' => array(
                 'daft' => __( 'Style 1' ,'fl-builder'),
-                'nutcracker' => __( 'Style 2','fl-builder' ),// Add more in the future releases
+                'nutcracker' => __( 'Style 2','fl-builder' ),
+                'alpha-list' => __( 'Style 3','fl-builder' ),// Add more in the future releases
               ),
               'default' => 'daft',
               'toggle' => array(
                 'nutcracker' => array(
                   'sections' => array(
                     'image_style_section',
-
                   )
                 ),
                 'daft' => array(
                   'fields' => array(
                     'display_image',
+                  ),
+                  'sections' => array(
                     'background_style_section'
+                  )
+                ),
+                'alpha-list' => array(
+                  'fields' => array(
+                    'display_image',
+                  ),
+                  'sections' => array(
+                    'background_style_section',
+                    'icon_section'
                   )
                 )
               )
@@ -101,6 +112,16 @@ FLBuilder::register_module( 'MustachePosts', apply_filters(
 
           )
         ),
+        'icon_section'=> array(
+          'title' => __( 'Icon','fl-builder' ),
+          'fields' => array(
+            'icon_to_use' => array(
+              'type' => 'icon',
+              'label' => __( 'Icon','fl-builder' ),
+              'show_remove' => true
+            ), // end of icon_to_use field
+          )
+        ), // end of icon_section section
         //'display_section' => array(), WILL BE ADDED IN THE FUTURE VERSION
         'link_section' => array(
           'title' => __( 'Link','fl-builder' ),
@@ -111,7 +132,8 @@ FLBuilder::register_module( 'MustachePosts', apply_filters(
               'options' => array(
                 'none' => __( 'None','fl-builder' ),
                 'button' => __( 'Button','fl-builder' ),
-                'box' => __( 'Box','fl-builder' )
+                'box' => __( 'Box','fl-builder' ),
+                'title' => __( 'Title','fl-builder' )
               ),
               'default' => 'box',
               'toggle' => array(
@@ -211,7 +233,7 @@ FLBuilder::register_module( 'MustachePosts', apply_filters(
               'default' => 15
             )
           )
-        ),
+        ), // end of content_section section
         'pagination_section' => array(
           'title' => __( 'Pagination','fl-builder' ),
           'fields' => array(

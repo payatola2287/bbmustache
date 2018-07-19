@@ -87,6 +87,8 @@
   background-color: <?php echo $module->color( $settings->image_hover_overlay_color ); ?>
 
 }
+/* ALPHA LIST LAYOUT */
+
 <?php endif; ?>
 @media screen and (min-width: <?php echo $global_settings->responsive_breakpoint; ?>px){
   .fl-node-<?php echo $id; ?> .item--grid{
