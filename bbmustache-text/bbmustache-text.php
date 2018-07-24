@@ -100,9 +100,14 @@ FLBuilder::register_module( 'MustacheText',array(
           'text_size' => array(
             'type' => 'unit',
             'label' => __( 'Font Size','fl-buider' ),
-            'default' => '16',
             'description' => 'px',
-            'responsive' => true
+            'responsive' => array(
+              'default' => array(
+                'default' => 16,
+                'medium' => 16,
+                'responsive' => 16
+              )
+            )
           ),
           'text_line_height' => array(
             'type' => 'unit',

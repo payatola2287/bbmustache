@@ -8,7 +8,7 @@
   $sm_text_size = intval($settings->text_size_responsive);
   $text_line_height = $settings->text_line_height;
 ?>
-.fl-node-<?php echo $id; ?> .bbmustache-module-wrapper .bbmustache-text{
+.fl-node-<?php echo $id; ?> .bbmustache-module-wrapper > *{
   line-height: <?php echo $text_line_height; ?>;
   font-family: <?php echo $text_fam; ?>;
   font-weight: <?php echo $text_weight; ?>;
