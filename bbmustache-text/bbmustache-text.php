@@ -43,6 +43,16 @@ FLBuilder::register_module( 'MustacheText',array(
             'label' => 'Text Alignment',
             'default' => 'left'
           ),
+          'tab_responsive_align' => array(
+            'type' => 'align',
+            'label' => __( 'Tab Alignment' ),
+            'default' => 'left'
+          ), // end of tab_responsive_align field
+          'mobile_responsive_align' => array(
+            'type' => 'align',
+            'label' => __( 'Mobile Alignment' ),
+            'default' => 'center'
+          ), // end of mobile_responsive_align
           'transform' => array(
             'type' => 'select',
             'label' => __( 'Text Transform','fl-builder' ),
