@@ -75,6 +75,10 @@ FLBuilder::register_module( 'MustachePosts', apply_filters(
               'label' => __( 'Posts Per Page','fl-builder' ),
               'default' => 3,
             ),
+            'default_image' => array(
+              'type' => 'photo',
+              'label' => __( 'Default Photo','fl-builder' )
+            ),
             'columns_count' => array(
               'type' => 'unit',
               'label' => __( 'Columns','fl-builder' ),
