@@ -1,0 +1,79 @@
+/**
+ * In here are the plugin's global css.
+ **/
+ /**
+  * MUSTACHE TESTIMONIALS
+  **/
+.bbmustache-testimonials-grid,
+.bbmustache-testimonial-quoter-details-wrapper{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.bbmustache-testimonial-grid-item{
+
+}
+.bbmustache-testimonial-grid-item,
+.bbmustache-testimonial-quote-text{
+  font-style: normal;
+  font-size: inherit;
+  margin: 10px 10px 20px;
+  color: inherit;
+  border: 0;
+  padding: 10px;
+}
+.bbmustache-testimonial-quoter-details-wrapper p,
+.bbmustache-testimonial-quote-text,
+.bbmustache-testimonial-quote-text p{
+  margin: 0;
+  padding: 0;
+}
+.bbmustache-testimonial-quote-text {
+  padding: 20px;
+  position: relative;
+  overflow: visible;
+  background: #f0f0f0;
+  border-radius: 10px;
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+.bbmustache-testimonial-quote-text:before{
+  content: open-quote;
+  position: absolute;
+  font-size: 3em;
+  font-weight: 600;
+  top: -0.25em;
+  line-height: 1;
+}
+.bbmustache-testimonial-grid-emphasis .bbmustache-testimonial-quote-text:before{
+  font-size: 6em;
+  color: rgb(234, 76, 137);
+}
+.bbmustache-testimonial-quote-text:after{
+  position: absolute;
+  bottom: -10px;
+  content: "";
+  display: block;
+  height: 30px;
+  width: 30px;
+  background: inherit;
+  left: 30px;
+  -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+}
+.bbmustache-testimonial-quoter-details-wrapper{
+  margin: 15px 0 0;
+  -webkit-box-align: center;
+    -ms-flex-align: center;
+        align-items: center;
+}
+.bbmustache-testimonial-quoter-image{
+  width: 75px;
+  border-radius: 50%;
+}
+.bbmustache-testimonial-name{
+  font-size: inherit;
+  color: inherit;
+}
