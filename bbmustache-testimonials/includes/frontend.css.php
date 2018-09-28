@@ -53,9 +53,17 @@
  **/
 .fl-node-<?php echo $id; ?> .bbmustache-testimonial-grid-item{
   width: calc(<?php echo 100 / $smColumnCount; ?>% - <?php echo $margin_right + $margin_left; ?>px );
+  margin: <?php echo $margin_top; ?>px <?php echo $margin_right; ?>px <?php echo $margin_bottom; ?>px <?php echo $margin_left; ?>px;
 }
 .fl-node-<?php echo $id; ?> .bbmustache-testimonial-quote-text{
   background: <?php echo $itemBackgroundColor; ?>;
+  -webkit-transition: all .5s ease-in-out;
+-o-transition: all .5s ease-in-out;
+transition: all .5s ease-in-out;
+  padding: <?php echo $padding_top; ?>px <?php echo $padding_right; ?>px <?php echo $padding_bottom; ?>px <?php echo $padding_left; ?>px;
+}
+.fl-node-<?php echo $id; ?> .bbmustache-testimonial-grid-item:hover .bbmustache-testimonial-quote-text{
+  background: <?php echo $itemBackgroundHoverColor; ?>;
 }
 .fl-node-<?php echo $id; ?> .bbmustache-testimonial-name{
   font-size: <?php echo $smTextSize; ?>px;
@@ -70,6 +78,9 @@
   color: <?php echo $textColor; ?>;
   font-family: <?php echo $fontFamily; ?>;
   font-weight: <?php echo $fontWeight; ?>;
+}
+.fl-node-<?php echo $id; ?> .bbmustache-testimonial-grid-item:hover .bbmustache-testimonial-quote-text p{
+    color: <?php echo $hoverColor; ?>;
 }
 .fl-node-<?php echo $id; ?> .bbmustache-testimonial-quote-text:before{
   color: <?php echo $quotationMarkColor; ?>;

@@ -53,7 +53,7 @@
 .bbmustache-testimonial-quote-text:after{
   position: absolute;
   bottom: -10px;
-  content: "";
+  content: no-close-quote;
   display: block;
   height: 30px;
   width: 30px;
